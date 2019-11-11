@@ -7,4 +7,4 @@ linux_version=$(uname -r | cut -d '-' -f1)
 current_date=$(date +'%d.%m.%Y %H:%M ')
 
 #Output
-echo Linux Version $linux_version "|" $current_date
+echo Linux Version $linux_version "|" $current_date 
