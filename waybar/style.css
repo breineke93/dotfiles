@@ -89,6 +89,12 @@ window#waybar.chromium {
     background-color: @color2;
 }
 
+
+#custom-shutdown {
+    color: @color3;
+
+}
+
 #battery {
     background-color: transparent;
     color: #000000;

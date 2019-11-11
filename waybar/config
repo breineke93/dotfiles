@@ -4,7 +4,7 @@
     "height": 20,
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["clock"],
-    "modules-right": ["cpu","memory"],
+    "modules-right": ["cpu","memory","custom/shutdown"],
    
     "sway/window":
 	{
@@ -28,5 +28,12 @@
 	"interval": 30,
 	"format": "Mem: {}%",
 	"max-length": 10
+	},
+
+    "custom/shutdown":
+	{
+	"format": "Shutdown",
+	"interval": 0,
+	"on-click": "exec swaynag -t warning -m 'Shutdown the system?' -b 'Yes' 'shutdown'"
 	}
 }
