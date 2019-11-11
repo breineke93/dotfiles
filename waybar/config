@@ -1,0 +1,32 @@
+{
+    "layer": "bottom",
+    "position": "bottom",
+    "height": 20,
+    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-center": ["clock"],
+    "modules-right": ["cpu","memory"],
+   
+    "sway/window":
+	{
+        "max-length": 50
+	},
+
+    "clock":
+	{
+        "format-alt": "{:%a, %d. %b  %H:%M}"
+	},
+
+    "cpu":
+	{
+	"interval": 30,
+	"format": "CPU: {}%",
+	"max-length": 10
+	},
+
+    "memory":
+	{
+	"interval": 30,
+	"format": "Mem: {}%",
+	"max-length": 10
+	}
+}

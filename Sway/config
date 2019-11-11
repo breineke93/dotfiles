@@ -201,17 +201,18 @@ bindsym $mod+r mode "resize"
 #
 # Read `man 5 sway-bar` for more information about this section.
 bar {
-    position bottom
-    font pango:Inconsolata 12
+swaybar_command waybar
+#    position bottom
+ #   font pango:Inconsolata 12
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
-    status_command while bash ~/.config/sway/swaybar/status.sh; do sleep 5; done
+  #  status_command while bash ~/.config/sway/swaybar/status.sh; do sleep 5; done
     # gaps 4
-    colors {
-        statusline $foreground
-        background $background
-        inactive_workspace $background $background $foreground
-        focused_workspace $color2 $color2 $foreground
+   # colors {
+     #   statusline $foreground
+    #    background $background
+       # inactive_workspace $background $background $foreground
+      #  focused_workspace $color2 $color2 $foreground
 	
     }
 }
