@@ -1,4 +1,6 @@
 # Dotfiles for Linux
+![Screenshot](https://github.com/breineke93/dotfiles/blob/master/clean.png)
+
 ## Programs:
 * SwayWM
 * Swaybar (currently not in use)
