@@ -3,7 +3,7 @@ Formatting is terrible, will fix in future commits.
 
 Dotfiles for:
 * SwayWM (and Swaybar)
-* Waybar
+* Waybar (https://github.com/Alexays/Waybar)
 * Kitty Terminal
 
 Have fun!
