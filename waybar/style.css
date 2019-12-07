@@ -55,7 +55,7 @@ window#waybar.chromium {
 
 #workspaces button.focused {
     background-color: #64727D;
-    border-top: 2px solid #ffffff;
+    border-top: 2px solid white;
 }
 
 #workspaces button.urgent {
@@ -64,7 +64,7 @@ window#waybar.chromium {
 
 #mode {
     background-color: #64727D;
-    border-bottom: 3px solid #ffffff;
+    border-top: 2px solid white;
 }
 
 #clock,
@@ -149,13 +149,13 @@ label:focus {
 }
 
 #pulseaudio {
-    background-color: #f1c40f;
-    color: #000000;
+    background-color: transparent;
+    color: @foreground;
 }
 
 #pulseaudio.muted {
-    background-color: #90b1b1;
-    color: #2a5c45;
+    background-color: transparent;
+    color: @foreground;
 }
 
 #custom-media {

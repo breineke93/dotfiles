@@ -4,7 +4,7 @@
     "height": 20,
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["clock"],
-    "modules-right": ["cpu","memory","custom/shutdown"],
+    "modules-right": ["cpu","memory","pulseaudio","custom/shutdown"],
    
     "sway/window":
 	{
@@ -15,6 +15,15 @@
 	{
         "format-alt": "{:%a, %d. %b  %H:%M}"
 	},
+
+    "pulseaudio":
+        {
+        "format": "VOL: {volume}%",
+        "format-muted": "Mute",
+	"scroll-step": 1,
+	"on-click": "pavucontrol"
+        },
+
 
     "cpu":
 	{
@@ -34,6 +43,6 @@
 	{
 	"format": "Shutdown",
 	"interval": 0,
-	"on-click": "exec swaynag -t warning -m 'Shutdown the system?' -b 'Yes' 'shutdown'"
+	"on-click": "exec swaynag -t warning -m 'Shutdown the system NOW?' -b 'Yes' 'shutdown now'"
 	}
 }
