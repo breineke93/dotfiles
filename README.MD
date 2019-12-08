@@ -1,6 +1,8 @@
 # Dotfiles for Linux
 ![Screenshot](https://github.com/breineke93/dotfiles/blob/master/clean.png)
 
+* Wallpaper: https://wallhaven.cc/w/j88pom
+
 ## Programs:
 * SwayWM
 * Swaybar (currently not in use)
