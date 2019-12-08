@@ -37,6 +37,7 @@ client.unfocused $background $background $foreground $color7 $background
 # "files" in german is "Dateien" so we use d as a shortcut, also it's close to f on the keyboard.d
 bindsym $mod+d exec thunar
 bindsym $mod+f exec firefox
+bindsym $mod+Shift+f exec firefox --private-window
 
 ### Idle configuration
 #
