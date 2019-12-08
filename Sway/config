@@ -33,6 +33,11 @@ output * background $wallpaper fill
 client.focused $color2 $background $foreground $color7 $color2
 client.unfocused $background $background $foreground $color7 $background
 
+# Set some keybindings for launching apps
+# "files" in german is "Dateien" so we use d as a shortcut, also it's close to f on the keyboard.d
+bindsym $mod+d exec thunar
+bindsym $mod+f exec firefox
+
 ### Idle configuration
 #
 # Example configuration:
@@ -136,7 +141,7 @@ client.unfocused $background $background $foreground $color7 $background
     bindsym $mod+e layout toggle split
 
     # Make the current focus fullscreen
-    bindsym $mod+f fullscreen
+    bindsym $mod+Control+f fullscreen
 
     # Move focus to the parent container
     bindsym $mod+a focus parent
