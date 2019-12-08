@@ -83,8 +83,8 @@ bindsym $mod+Shift+f exec firefox --private-window
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway?' -b 'Yes' 'swaymsg exit'
 # Multimedia
-    bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 1 -5%
-    bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 1 +5%
+    bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
+    bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
 
 #
 # Moving around:
