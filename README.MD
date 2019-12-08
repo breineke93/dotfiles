@@ -7,6 +7,7 @@
 * Kitty terminal
 * Waybar
 * Wofi (no dotfile needed)
+* Thunar (used as default file manager keybinding in sway config)
 
 ## Changes:
 * Sway: Use Pywal colors, use wofi and waybar
