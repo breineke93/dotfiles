@@ -2,42 +2,46 @@
 
 ### Variables
 #
-# Logo key. Use Mod1 for Alt.
-set $mod Mod4
+# Logo key. Use Mod1 for Alt. Or Mod4 for Meta/Super/Windows
+    set $mod Mod4
 # Your preferred terminal emulator
-set $term kitty
+    set $term kitty
 # Your preferred application launcher -- wofi (Wayland native)
 # Note: it's recommended that you pass the final command to sway
-set $menu dmenu_path | wofi --show drun | xargs swaymsg exec --
+    set $menu dmenu_path | wofi --show drun | xargs swaymsg exec --
 
 
 ### Personal
 # Import pywal colors
-include "$HOME/.cache/wal/colors-sway"
+    include "$HOME/.cache/wal/colors-sway"
 
 #Styling
-default_border pixel 3
-default_floating_border pixel 4
-gaps inner 10
-gaps outer 10 
-smart_gaps on
-smart_borders on
+    default_border pixel 3
+    default_floating_border pixel 4
+    gaps inner 10
+    gaps outer 10 
+    smart_gaps on
+    smart_borders on
 
 #Regenerate pywal colors
-exec_always wal -R
+    exec_always wal -R
 
 #Set wallpaper to pywal wallpaper
-output * background $wallpaper fill
+    output * background $wallpaper fill
 
 #Set colors to pywal colors
-client.focused $color2 $background $foreground $color7 $color2
-client.unfocused $background $background $foreground $color7 $background
+    client.focused $color2 $background $foreground $color7 $color2
+    client.unfocused $background $background $foreground $color7 $background
 
 # Set some keybindings for launching apps
-# "files" in german is "Dateien" so we use d as a shortcut, also it's close to f on the keyboard.d
-bindsym $mod+d exec thunar
-bindsym $mod+f exec firefox
-bindsym $mod+Shift+f exec firefox --private-window
+# "Files" in German is "Dateien" so we use d for the binding, also it's close to f on the keyboard.
+    bindsym $mod+d exec thunar
+    bindsym $mod+f exec firefox
+    bindsym $mod+Shift+f exec firefox --private-window
+
+# And set keybindings for multimedia keys
+    bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
+    bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
 
 ### Idle configuration
 #
@@ -54,14 +58,14 @@ bindsym $mod+Shift+f exec firefox --private-window
 # resumed. It will also lock your screen before your computer goes to sleep.
 
 ### Input configuration
-  input * xkb_layout "de"
-  input * xkb_numlock 1
+    input * xkb_layout "de"
+    input * xkb_numlock 1
 
 ### Key bindings
 #
 # Basics:
 #
-    # Start a terminal
+    # Start a termina
     bindsym $mod+Return exec $term
 
     # Kill focused window
@@ -82,9 +86,6 @@ bindsym $mod+Shift+f exec firefox --private-window
 
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway?' -b 'Yes' 'swaymsg exit'
-# Multimedia
-    bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
-    bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
 
 #
 # Moving around:
@@ -125,7 +126,7 @@ bindsym $mod+Shift+f exec firefox --private-window
     bindsym $mod+Shift+8 move container to workspace 8
     bindsym $mod+Shift+9 move container to workspace 9
     bindsym $mod+Shift+0 move container to workspace 10
-    # Note: workspaces can have any name you want, not just numbers.r2
+    # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
 #
 # Layout stuff:
@@ -148,7 +149,7 @@ bindsym $mod+Shift+f exec firefox --private-window
     bindsym $mod+a focus parent
 
     # Toggle the current focus between tiling and floating mode
-   bindsym $mod+Shift+space floating toggle
+    bindsym $mod+Shift+space floating toggle
 #
 # Scratchpad:
 #
@@ -180,22 +181,23 @@ bindsym $mod+r mode "resize"
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.
-bar {
-swaybar_command waybar
-#    use this if you want to use swaybar...
-#    position bottom
- #   font pango:Inconsolata 12
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-  #  status_command while bash ~/.config/sway/swaybar/status.sh; do sleep 5; done
-    # gaps 4
-   # colors {
-     #   statusline $foreground
-    #    background $background
-       # inactive_workspace $background $background $foreground
-      #  focused_workspace $color2 $color2 $foreground
-	
-    }
+    bar {
+    swaybar_command waybar
+
+#### Uncomment this to use swaybar ####
+#   position bottom
+#   font pango:Inconsolata 12
+#   When the status_command prints a new line to stdout, swaybar updates.
+#   The default just shows the current date and time.
+#   status_command while bash ~/.config/sway/swaybar/status.sh; do sleep 5; done
+#   gaps 4
+#   colors {
+#      statusline $foreground
+#      background $background
+#      inactive_workspace $background $background $foreground
+#      focused_workspace $color2 $color2 $foreground
+#          }
 }
 
+# Include any configuration that is saved in /etc/sway/config.d/
 include /etc/sway/config.d/*
