@@ -38,7 +38,7 @@
     bindsym $mod+d exec thunar
     bindsym $mod+f exec firefox
     bindsym $mod+Shift+f exec firefox --private-window
-
+#   bindsym Alt+F2 exec wofi --show run
 # And set keybindings for multimedia keys
     bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
     bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
