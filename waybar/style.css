@@ -1,3 +1,4 @@
+/* Still contains lots of unchanged styling! Adding widgets other than custom-shutdown, cpu, mem, clock etc. will look funky! */
 @import "/home/benjamin/.cache/wal/colors-waybar.css";
 *
  {
